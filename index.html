@@ -26,6 +26,7 @@
                 Visit <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
             </div>
             <div class="mt-3">2026-04-07 17:00:37 UTC</div>
+            <div class="mt-3 text-gray-600" id="naas-response">hayır demenin farklı bir yolu: yükleniyor...</div>
         </header>
         <div class="my-8 bg-gradient-gray">
             <div class="w-240 lg:w-full mx-auto">
@@ -65,11 +66,11 @@
             <div class="clearfix">
                 <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
                     <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
-                    There is an internal server error on Cloudflare&#39;s network.
+                    This site has been archived. the developer of this site got bored of this project. if you want to use it, please contact him in the link down below.
                 </div>
                 <div class="w-1/2 md:w-full float-left leading-relaxed">
                     <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
-                    idk. its maintained by enes. wait till he fixes it.
+                    <p>idk. its maintained by enes. wait till he opens it back up..</p>
                 </div>
             </div>
         </div>
@@ -90,6 +91,6 @@
         </div><!-- /.error-footer -->
     </div>
 </div>
-<script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+<script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}function e(b){return fetch("https://api.mymemory.translated.net/get?q="+encodeURIComponent(b)+"&langpair=en|tr").then(function(c){if(!c.ok)throw new Error("HTTP "+c.status);return c.json()}).then(function(c){var f=c&&c.responseData&&typeof c.responseData.translatedText==="string"?c.responseData.translatedText.trim():"";return f||b}).catch(function(){return b})}function f(){var b=a.getElementById("naas-response");if(!b)return;fetch("https://naas.isalman.dev/no").then(function(c){if(!c.ok)throw new Error("HTTP "+c.status);return c.json()}).then(function(c){var g=c&&typeof c.reason==="string"?c.reason:JSON.stringify(c);return e(g)}).then(function(c){b.textContent="hayır demenin farklı bir yolu: "+c}).catch(function(c){b.textContent="hayır demenin farklı bir yolu: "+(c&&c.message?c.message:"getirilemedi")})}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",function(){d();f()})})();</script>
 </body>
 </html>
